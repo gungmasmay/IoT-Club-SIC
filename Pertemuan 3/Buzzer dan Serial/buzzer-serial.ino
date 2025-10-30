@@ -1,10 +1,9 @@
-int buzzer = 8;
-
+int buzzer1 = 8;
 void setup()
 {
-  pinMode(8, OUTPUT);
+  pinMode(buzzer1, OUTPUT);
   Serial.begin(9600);
-  Serial.println("Buzzer siap");
+  Serial.println("Buzzer Siap");
 }
 
 void loop()
@@ -13,12 +12,12 @@ void loop()
   s.trim();
   if (s == "hidup")
   {
-    tone(buzzer, 1000);
-    Serial.println("Buzzer hidup");
+    tone(buzzer1, 1000);
+    Serial.println("Buzzer nyala");
   }
   else if (s == "mati")
   {
-    noTone(buzzer);
-    Serial.println("Buzzer mati");
+    noTone(buzzer1);
+    Serial.println("Buzzer mati");
   }
 }
